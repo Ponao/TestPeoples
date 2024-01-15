@@ -49,13 +49,13 @@ class Register extends React.Component {
 
     selectAvatar = (info) => {
         let file = info.file
-        const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png'
+        const isJpgOrPng = file.type === 'image/png'
         if(!isJpgOrPng) {
-            alert('You can only upload JPG/PNG file!')
+            alert('You can only upload PNG file!')
         }
         const isLt10M = file.size / 1024 / 1024 < 10
         if(!isLt10M) {
-            alert('Image must smaller than 2MB!')
+            alert('Image must smaller than 10MB!')
         }
         if(!isJpgOrPng || !isLt10M) return
 
